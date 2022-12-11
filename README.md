@@ -79,6 +79,105 @@ Dari gambar diatas dapat kita buat tree subnet CIDR seperti berikut :
 | E1 (D1+D2) | 1231      | /19     |
 
 Untuk konfigurasinya sebagai berikut
+- Blackbell
+
+![image](https://user-images.githubusercontent.com/73029778/206905262-e2bba5ed-1c50-4ec5-9700-6183fb46bddc.png)
+
+- Garden
+
+![image](https://user-images.githubusercontent.com/73029778/206905284-92d4a70b-68f8-47b0-b81a-131b7db2f3af.png)
+
+- Strix
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+	hwaddress ether b6:23:6b:b5:5d:33
+
+auto eth1
+iface eth1 inet static
+	address 10.32.8.1
+	netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+	address 10.32.24.1
+	netmask 255.255.255.252
+```
+
+- Ostania
+```
+auto eth0
+iface eth0 inet static
+	address 10.32.24.2
+	netmask 255.255.255.252
+	gateway 10.32.24.1
+
+auto eth1
+iface eth1 inet static
+	address 10.32.20.1
+	netmask 255.255.255.0
+
+auto eth2
+iface eth2 inet static
+	address 10.32.18.1
+	netmask 255.255.255.248
+
+auto eth3
+iface eth3 inet static
+	address 10.32.16.1
+	netmask 255.255.254.0
+```
+
+- Eden
+
+![image](https://user-images.githubusercontent.com/73029778/206905412-a98f3ac3-f683-4ba0-80b4-91a82f3d3907.png)
+
+- Westalis
+```
+auto eth0
+iface eth0 inet static
+	address 10.32.8.2
+	netmask 255.255.255.252
+	gateway 10.32.8.1
+
+auto eth1
+iface eth1 inet static
+	address 10.32.4.129
+	netmask 255.255.255.248
+
+auto eth2
+iface eth2 inet static
+	address 10.32.4.1
+	netmask 255.255.255.128
+
+auto eth3
+iface eth3 inet static
+	address 10.32.0.1
+	netmask 255.255.252.0
+```
+
+- Desmond
+
+![image](https://user-images.githubusercontent.com/73029778/206905575-387daac9-957b-4487-b209-93118c6f69fc.png)
+
+- Briar
+
+![image](https://user-images.githubusercontent.com/73029778/206905592-b1851f5c-adc4-4a0b-9ef2-a55bdb7da099.png)
+
+- SSS
+
+![image](https://user-images.githubusercontent.com/73029778/206905609-1148a383-e279-4f7f-9c3d-43f81f4f3b8a.png)
+
+- Wise
+
+![image](https://user-images.githubusercontent.com/73029778/206905620-072be2b8-1dbe-4502-9c27-66338eeb99b5.png)
+
+- Forger
+
+![image](https://user-images.githubusercontent.com/73029778/206905645-64173cfc-8264-4866-91bb-486c5fd72cfa.png)
 
 
 ## Routing
